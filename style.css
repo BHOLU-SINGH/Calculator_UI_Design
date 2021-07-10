@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.container{
+	position: relative;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 6px;
+	overflow: hidden;
+	z-index: 10;
+	backdrop-filter: blur(15px);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+form{
+	margin: 5px;
+}
+.container .calculator{
+	position: relative;
+	display: grid;
+}
+
+.container .calculator .value{
+	grid-column: span 4;
+	width: 311px;
+	height: 120px;
+	text-align: right;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 30px;
+	margin-bottom: 5px;
+	background: transparent;
+	box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.1);
+}
+.container .calculator span{
+	display: grid;
+	place-items: center;
+	width: 72px;
+	height: 72px;
+	font-weight: 400;
+	cursor: pointer;
+	font-size: 20px;
+	user-select: none;
+	margin: 3px;
+	border-radius: 20%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: 0.5s;
+}
+.container .calculator span:hover{
+	transition: 0s;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.05);
+}
+.container .calculator span:active{
+	background: lightgreen;
+	color: #192f00;
+	font-size: 24px;
+	font-weight: 500;
+}
+.container .calculator .clear{
+	grid-column: span 2;
+	width: 150px;
+	background: rgba(255, 255, 255, 0.05);
+}
+.container .calculator .plus{
+	grid-row: span 2;
+	height: 150px;
+}
+.equal{
+	background: rgba(255, 255, 255, 0.05);
+}
